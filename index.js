@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTypingAnimation();
   initParticleCanvas();
   initContactForm();
+  initScrollReveal();
 });
 
 /**
@@ -298,4 +299,31 @@ function initContactForm() {
       }, 1500);
     });
   }
+}
+
+/**
+ * Scroll Reveal Animation Handler using Intersection Observer
+ */
+function initScrollReveal() {
+  const reveals = document.querySelectorAll(".reveal, .reveal-stagger");
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.15,
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        // Animation runs once when element enters screen
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  reveals.forEach((el) => {
+    observer.observe(el);
+  });
 }

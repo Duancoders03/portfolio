@@ -186,16 +186,17 @@ a {
     left: 0;
     width: 100%;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    background: transparent;
+    border-bottom: 1px solid transparent;
     transition: var(--transition-smooth);
 }
 
 .header.scrolled {
     padding: 0.5rem 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
     box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
 }
 
@@ -215,6 +216,11 @@ a {
     font-size: 1.5rem;
     font-weight: 800;
     font-family: var(--font-header);
+    color: #ffffff;
+    transition: var(--transition-smooth);
+}
+
+.header.scrolled .logo {
     color: var(--text-primary);
 }
 
@@ -234,9 +240,14 @@ a {
     font-family: var(--font-header);
     font-weight: 500;
     font-size: 0.95rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8);
     position: relative;
     padding: 0.5rem 0;
+    transition: color var(--transition-fast);
+}
+
+.header.scrolled .nav-link {
+    color: var(--text-secondary);
 }
 
 .nav-link:hover, .nav-link.active {
@@ -294,11 +305,44 @@ section {
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile devices */
     display: flex;
     align-items: center;
     padding-top: 100px;
     position: relative;
     overflow: hidden;
+    background-color: #0b0c15; /* High-tech dark background */
+}
+
+/* Hero Video Background */
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.hero-video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85; /* Keep video highly visible and crisp */
+    filter: saturate(1.1) contrast(1.05) brightness(0.9); /* Premium original coding colors */
+}
+
+.hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at center, rgba(11, 12, 21, 0) 20%, #0b0c15 85%),
+        linear-gradient(to bottom, transparent 95%, var(--bg-primary) 100%);
 }
 
 .hero-bg-grid {
@@ -308,8 +352,8 @@ section {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(15, 23, 42, 0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 45px 45px;
     background-position: center top;
     mask-image: radial-gradient(circle at center, black 40%, transparent 85%);
@@ -363,16 +407,43 @@ section {
     z-index: 2;
 }
 
+/* Hero Entrance Animations */
+.hero-badge,
+.hero-title,
+.hero-subtitle,
+.hero-desc,
+.hero-buttons {
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-badge { animation-delay: 0.15s; }
+.hero-title { animation-delay: 0.3s; }
+.hero-subtitle { animation-delay: 0.45s; }
+.hero-desc { animation-delay: 0.6s; }
+.hero-buttons { animation-delay: 0.75s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
     padding: 0.45rem 1.1rem;
     border-radius: 30px;
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(79, 70, 229, 0.15);
+    border: 1px solid rgba(79, 70, 229, 0.25);
     box-shadow: 0 4px 15px rgba(79, 70, 229, 0.02);
     margin-bottom: 1.5rem;
     transition: var(--transition-smooth);
@@ -380,8 +451,8 @@ section {
 
 .hero-badge:hover {
     transform: translateY(-2px);
-    border-color: rgba(79, 70, 229, 0.35);
-    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.06);
+    border-color: rgba(79, 70, 229, 0.45);
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.1);
 }
 
 .badge-dot {
@@ -397,7 +468,7 @@ section {
     font-family: var(--font-header);
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--color-cyan);
+    color: #a5b4fc;
     letter-spacing: 0.05em;
     text-transform: uppercase;
 }
@@ -418,38 +489,60 @@ section {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1.25rem;
-    color: var(--text-primary);
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 .hero-subtitle {
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--text-secondary);
+    color: #ffffff;
     margin-bottom: 1.5rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
 .typing-text {
-    color: var(--color-cyan);
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #38bdf8; /* Bright electric blue for high contrast on dark video background */
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.5); /* Premium glowing effect */
 }
 
 .cursor {
-    color: var(--color-cyan);
+    color: #38bdf8;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
     animation: blink 0.8s infinite;
 }
 
 .hero-desc {
     font-size: 1.05rem;
-    color: var(--text-secondary);
+    font-weight: 450;
+    color: rgba(255, 255, 255, 0.85);
     max-width: 520px;
     margin-bottom: 2rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-buttons {
     display: flex;
     gap: 1.25rem;
+}
+
+.hero-buttons .btn-secondary {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+.hero-buttons .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-cyan);
+    color: #ffffff;
 }
 
 .hero-visual {
@@ -596,7 +689,7 @@ section {
 .mouse-scroll {
     width: 24px;
     height: 38px;
-    border: 2px solid var(--text-secondary);
+    border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 12px;
     position: relative;
     display: flex;
@@ -613,7 +706,7 @@ section {
 .mouse-wheel {
     width: 3px;
     height: 6px;
-    background-color: var(--text-secondary);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 2px;
     position: absolute;
     top: 6px;
@@ -885,6 +978,25 @@ section {
 .skill-tag:hover .tag-dot {
     background: #ffffff;
 }
+
+.tag-experience {
+    font-size: 0.72rem;
+    opacity: 0.85;
+    margin-left: 0.35rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 6px;
+    background: rgba(15, 23, 42, 0.05);
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.skill-tag:hover .tag-experience {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    opacity: 1;
+}
+
 
 @media (max-width: 640px) {
     .skill-card {
@@ -1388,11 +1500,22 @@ section {
     }
     
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem; /* Slightly smaller for mobile screens */
     }
     
     .hero-subtitle {
-        font-size: 1.5rem;
+        font-size: 1.35rem; /* Scaled down for mobile */
+    }
+    
+    .hero-video-bg {
+        opacity: 0.70; /* Lower opacity on mobile for better text readability */
+        object-position: center; /* Ensure the video content stays centered */
+    }
+    
+    .hero-video-overlay {
+        background: 
+            radial-gradient(circle at center, rgba(11, 12, 21, 0.25) 20%, #0b0c15 90%),
+            linear-gradient(to bottom, transparent 95%, var(--bg-primary) 100%);
     }
     
     .nav-list {
@@ -1410,10 +1533,19 @@ section {
     .hamburger, .hamburger::before, .hamburger::after {
         content: '';
         display: block;
-        background: var(--text-primary);
+        background: #ffffff;
         height: 2px;
         width: 24px;
         transition: var(--transition-fast);
+    }
+    
+    .header.scrolled .hamburger,
+    .header.scrolled .hamburger::before,
+    .header.scrolled .hamburger::after,
+    .mobile-nav-toggle.active .hamburger,
+    .mobile-nav-toggle.active .hamburger::before,
+    .mobile-nav-toggle.active .hamburger::after {
+        background: var(--text-primary);
     }
     
     .hamburger::before { transform: translateY(-7px); }
@@ -1435,6 +1567,10 @@ section {
         box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     }
     
+    .nav.open .nav-list .nav-link {
+        color: var(--text-secondary);
+    }
+    
     .about-stats {
         flex-direction: column;
     }
@@ -1449,3 +1585,54 @@ section {
         gap: 0.5rem;
     }
 }
+
+/* ==========================================================================
+   Scroll Reveal Animation Styles
+   ========================================================================== */
+
+/* Base classes */
+.reveal {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform, opacity;
+}
+
+.reveal-fade-up {
+    transform: translateY(30px);
+}
+
+.reveal-fade-left {
+    transform: translateX(-30px);
+}
+
+.reveal-fade-right {
+    transform: translateX(30px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Staggered transition delays for children */
+.reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform, opacity;
+}
+
+.reveal-stagger.active > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loop for stagger delays */
+.reveal-stagger.active > *:nth-child(1) { transition-delay: 0.05s; }
+.reveal-stagger.active > *:nth-child(2) { transition-delay: 0.12s; }
+.reveal-stagger.active > *:nth-child(3) { transition-delay: 0.19s; }
+.reveal-stagger.active > *:nth-child(4) { transition-delay: 0.26s; }
+.reveal-stagger.active > *:nth-child(5) { transition-delay: 0.33s; }
+.reveal-stagger.active > *:nth-child(6) { transition-delay: 0.40s; }
+.reveal-stagger.active > *:nth-child(7) { transition-delay: 0.47s; }
+.reveal-stagger.active > *:nth-child(8) { transition-delay: 0.54s; }

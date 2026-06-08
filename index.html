@@ -55,6 +55,12 @@
         <!-- Hero Section -->
         <section id="home" class="hero-section">
             <!-- Background elements -->
+            <div class="hero-video-container">
+                <video autoplay loop muted playsinline class="hero-video-bg">
+                    <source src="assets/video2.mp4" type="video/mp4">
+                </video>
+                <div class="hero-video-overlay"></div>
+            </div>
             <div class="hero-bg-grid"></div>
             <div class="hero-glow-orb orb-1"></div>
             <div class="hero-glow-orb orb-2"></div>
@@ -75,30 +81,7 @@
                         <a href="#contact" class="btn btn-secondary">Contact Me</a>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <div class="visual-glow-orb"></div>
-                    <div class="visual-ring ring-1"></div>
-                    <div class="visual-ring ring-2"></div>
-                    <img src="assets/avatar_glow.png" alt="Truong Van Duan Developer Illustration" class="visual-image">
-                    
-                    <!-- Floating Tech Tags -->
-                    <div class="floating-tag tag-node">
-                        <span class="tag-color-dot" style="background: #339933;"></span>
-                        <span>Node.js</span>
-                    </div>
-                    <div class="floating-tag tag-docker">
-                        <span class="tag-color-dot" style="background: #2496ed;"></span>
-                        <span>Docker</span>
-                    </div>
-                    <div class="floating-tag tag-postgres">
-                        <span class="tag-color-dot" style="background: #4169e1;"></span>
-                        <span>PostgreSQL</span>
-                    </div>
-                    <div class="floating-tag tag-api">
-                        <span class="tag-color-dot" style="background: #8b5cf6;"></span>
-                        <span>REST APIs</span>
-                    </div>
-                </div>
+               
             </div>
             <div class="scroll-down">
                 <a href="#about" aria-label="Scroll to about section">
@@ -112,13 +95,13 @@
         <!-- About Section -->
         <section id="about" class="about-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal reveal-fade-up">
                     <h2 class="section-title">About Me</h2>
                     <div class="section-bar"></div>
                 </div>
                 
                 <div class="about-grid">
-                    <div class="about-bio glass-card">
+                    <div class="about-bio glass-card reveal reveal-fade-left">
                         <h3 class="card-subtitle">Backend Developer</h3>
                         <p class="bio-text">
                             With practical experience in building specialized backend business logic systems, database design and optimization, I aim to create well-structured, secure, and high-performance software products.
@@ -134,7 +117,7 @@
                         </div>
                     </div>
                     
-                    <div class="about-stats">
+                    <div class="about-stats reveal-stagger">
                         <div class="stat-card glass-card">
                             <span class="stat-number">1+</span>
                             <span class="stat-label">Years of Experience</span>
@@ -155,12 +138,12 @@
         <!-- Skills Section -->
         <section id="skills" class="skills-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal reveal-fade-up">
                     <h2 class="section-title">Skills</h2>
                     <div class="section-bar"></div>
                 </div>
                 
-                <div class="skills-grid">
+                <div class="skills-grid reveal-stagger">
                     <!-- Card 1: Backend & APIs -->
                     <div class="skill-card glass-card accent-backend">
                         <div class="card-glow"></div>
@@ -171,11 +154,11 @@
                             <h3>Backend & APIs</h3>
                         </div>
                         <div class="skills-tags">
-                            <span class="skill-tag"><span class="tag-dot"></span>Node.js (Express)</span>
-                            <span class="skill-tag"><span class="tag-dot"></span>Laravel (PHP)</span>
-                            <span class="skill-tag"><span class="tag-dot"></span>RESTful APIs</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>Node.js </span>
+                            <span class="skill-tag"><span class="tag-dot"></span>Laravel</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>REST APIs</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>WebSocket</span>
                             <span class="skill-tag"><span class="tag-dot"></span>RabbitMQ</span>
-                            <span class="skill-tag"><span class="tag-dot"></span>Socket.io (Real-time)</span>
                         </div>
                     </div>
 
@@ -207,6 +190,7 @@
                             <span class="skill-tag"><span class="tag-dot"></span>Docker</span>
                             <span class="skill-tag"><span class="tag-dot"></span>Cloudflare</span>
                             <span class="skill-tag"><span class="tag-dot"></span>PM2</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>Tailscale</span>
                             <span class="skill-tag"><span class="tag-dot"></span>CI/CD</span>
                         </div>
                     </div>
@@ -235,11 +219,11 @@
                             <h3>Frontend & Tools</h3>
                         </div>
                         <div class="skills-tags">
-                            <span class="skill-tag"><span class="tag-dot"></span>React</span>
-                            <span class="skill-tag"><span class="tag-dot"></span>JavaScript / TypeScript</span>
-                            <span class="skill-tag"><span class="tag-dot"></span>HTML5 / CSS3 / Tailwind</span>
-                            <span class="skill-tag"><span class="tag-dot"></span>Postman</span>
-                            <span class="skill-tag"><span class="tag-dot"></span>Git / GitHub</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>React.js</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>JavaScript</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>TypeScript</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>GitHub</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>PWA</span>
                         </div>
                     </div>
                 </div>
@@ -249,14 +233,14 @@
         <!-- Experience Section -->
         <section id="experience" class="experience-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal reveal-fade-up">
                     <h2 class="section-title">Work Experience</h2>
                     <div class="section-bar"></div>
                 </div>
                 
                 <div class="timeline">
                     <!-- NHPTECH -->
-                    <div class="timeline-item">
+                    <div class="timeline-item reveal reveal-fade-up">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">Jan 2026 - Present</div>
                         <div class="timeline-content glass-card">
@@ -288,7 +272,7 @@
                     </div>
 
                     <!-- Wintech -->
-                    <div class="timeline-item">
+                    <div class="timeline-item reveal reveal-fade-up">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">Jul 2025 - Dec 2025</div>
                         <div class="timeline-content glass-card">
@@ -321,12 +305,12 @@
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal reveal-fade-up">
                     <h2 class="section-title">Personal Projects</h2>
                     <div class="section-bar"></div>
                 </div>
                 
-                <div class="projects-grid">
+                <div class="projects-grid reveal-stagger">
                     <!-- Project 1: Nga Sơn Plus -->
                     <div class="project-card glass-card">
                         <div class="project-image-wrapper">
@@ -405,13 +389,13 @@
         <!-- Contact Section -->
         <section id="contact" class="contact-section">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header reveal reveal-fade-up">
                     <h2 class="section-title">Contact</h2>
                     <div class="section-bar"></div>
                 </div>
                 
                 <div class="contact-grid">
-                    <div class="contact-info-panel glass-card">
+                    <div class="contact-info-panel glass-card reveal reveal-fade-left">
                         <h3 class="card-subtitle">Connect with me</h3>
                         <p class="contact-desc">
                             I am always open to collaboration, freelance opportunities, or technical discussions. Let's connect and start a conversation!
@@ -447,7 +431,7 @@
                         </div>
                     </div>
                     
-                    <div class="contact-form-panel glass-card">
+                    <div class="contact-form-panel glass-card reveal reveal-fade-right">
                         <form id="contactForm" class="contact-form">
                             <div class="form-group">
                                 <label for="formName">Full Name</label>

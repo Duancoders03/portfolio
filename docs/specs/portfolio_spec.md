@@ -29,11 +29,11 @@ The website highlights:
 
 ### 2.1 Skills Grid Showcase
 The portfolio groups and showcases technical skills in 5 glassmorphic cards:
-- **Backend & APIs (Core)**: Node.js (Express), Laravel (PHP), RESTful APIs, RabbitMQ, Socket.io (Real-time).
-- **Databases**: PostgreSQL, MySQL, Redis, Sequelize, Eloquent.
-- **DevOps & Operations**: Docker, Cloudflare, PM2, CI/CD.
-- **Artificial Intelligence (AI)**: Agent AI, Prompt Engineering, Model Integration, Automation.
-- **Frontend & Tools**: React, JavaScript/TypeScript, HTML5/CSS3/Tailwind, Postman, Git/GitHub.
+- **Backend & APIs (Core)**: Node.js (Employee at NHPTech), Laravel (Intern at Wintech), REST APIs, WebSocket, RabbitMQ.
+- **Databases**: PostgreSQL, MySQL.
+- **DevOps & Operations**: Docker, Cloudflare, PM2, Tailscale, CI/CD.
+- **Artificial Intelligence (AI)**: Agent AI.
+- **Frontend & Tools**: React.js, JavaScript, TypeScript, GitHub, PWA.
 
 ### 2.2 Work Experience
 - **NHPTECH** (Backend Developer) [Jan 2026 - Present]:
@@ -71,27 +71,39 @@ The portfolio groups and showcases technical skills in 5 glassmorphic cards:
 
 ## 3. UI/UX Design System
 
-Applying an elegant, clean, and professional **Light Glassmorphism** design pattern.
+Applying a premium hybrid design pattern featuring a high-tech **Dark Mode Hero Section** that transitions smoothly into an elegant **Light Glassmorphism** theme for the rest of the website.
 
 ### 3.1 Color Palette
-- **Main Background**: `#f8f9fa` (Soft Light Gray)
-- **Cards/Containers**: `rgba(255, 255, 255, 0.75)` with `backdrop-filter: blur(16px)` and subtle borders.
-- **Primary Accent**: `#4f46e5` (Royal Indigo)
-- **Secondary Accent**: `#0ea5e9` (Electric Sky Blue)
-- **Primary Text**: `#0f172a` (Deep Slate)
-- **Secondary Text**: `#475569` (Slate Gray)
+- **Hero Section (Dark Theme)**:
+  - **Background**: `#0b0c15` (Deep Slate Black)
+  - **Video Opacity**: `0.85` (Original high-contrast loop colors)
+  - **Primary Text**: `#ffffff`
+  - **Description Text**: `rgba(255, 255, 255, 0.85)`
+  - **Accent Highlight**: `#38bdf8` (Electric Sky Blue)
+  - **Hero Badge Glass**: `rgba(255, 255, 255, 0.05)`
+- **Body & Remaining Sections (Light Theme)**:
+  - **Main Background**: `#f8f9fa` (Soft Light Gray)
+  - **Cards/Containers**: `rgba(255, 255, 255, 0.75)` with `backdrop-filter: blur(16px)` and subtle borders.
+  - **Primary Accent**: `#4f46e5` (Royal Indigo)
+  - **Secondary Accent**: `#0ea5e9` (Electric Sky Blue)
+  - **Primary Text**: `#0f172a` (Deep Slate)
+  - **Secondary Text**: `#475569` (Slate Gray)
 
-### 3.2 Typography
+### 3.2 Typography & Contrast
 - **Headings**: *Outfit* (Modern, minimalist, and striking)
 - **Body Text**: *Inter* (Highly legible, professional)
 - **Terminal/CLI Interface**: *JetBrains Mono*
+- **Text Enhancement**: Webkit font-smoothing and text-shadows (`text-shadow: 0 2px 12px rgba(0,0,0,0.45)`) applied to hero headings to ensure maximum readability over the dynamic video loop background.
 
 ### 3.3 Dynamic Transitions & Key Interactions
-1. **Interactive Constellation Canvas**: Interlinked particles moving with mouse movements in the background.
-2. **Text Typing Animation**: Typing effect on headings for roles (`Backend Developer`, `API & Database Developer`, `System Integration Developer`).
-3. **Advanced Hero Section**: Blurred grid pattern (`.hero-bg-grid`), slow-moving gradient glow orbs (`.hero-glow-orb`), thin rotating rings (`.visual-ring`), and technology tags floating around the avatar profile wrapper.
-4. **Skills Grid**: 5 distinct glassmorphism cards that change border/shadow highlights according to their respective accent colors on hover, along with smooth tech-tag hover scaling.
-5. **Animated Mouse Indicator**: Smooth scroll-down mouse animation replacing static icons.
+1. **Interactive Constellation Canvas**: Interlinked particles moving with mouse movements in the page background.
+2. **Text Typing Animation**: Typing effect on headings for roles (`Backend Developer`, `API & Database Developer`, `System Integration Developer`) styled with a glowing `#38bdf8` text shadow.
+3. **Advanced Hero Section**: Clean dark section containing a high-contrast programming background video (`video2.mp4`), a subtle grid overlay (`.hero-bg-grid`), slow-moving gradient glow orbs (`.hero-glow-orb`), and a bottom linear-gradient fading the dark section into the light body at the last 5% of height.
+4. **Staggered Entrance Animations**: CSS keyframe `fadeInUp` animation running sequentially on load across the hero badge, title, subtitle, description, and action buttons.
+5. **Scroll-Responsive Header**: Fully transparent with white logo and navigation links at the top of the page, transitioning dynamically to a white glassmorphic navbar with dark text when scrolled past `50px`.
+6. **Skills Grid**: 5 distinct glassmorphism cards that change border/shadow highlights according to their respective accent colors on hover, along with smooth tech-tag hover scaling.
+7. **Animated Mouse Indicator**: Smooth scroll-down mouse animation replacing static icons.
+8. **Scroll Reveal Animations**: Clean, performant fade-up, fade-left, fade-right, and staggered reveal animations triggered dynamically as sections and elements enter the viewport via IntersectionObserver.
 
 ---
 
