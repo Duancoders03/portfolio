@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initParticleCanvas();
   initContactForm();
   initScrollReveal();
+  initHeroVideo();
 });
 
 /**
@@ -333,4 +334,61 @@ function initScrollReveal() {
   reveals.forEach((el) => {
     observer.observe(el);
   });
+}
+
+/**
+ * Hero Background Video Autoplay Handler (Mobile & Low Power Mode optimization)
+ */
+function initHeroVideo() {
+  const video = document.querySelector(".hero-video-bg");
+  if (!video) return;
+
+  // Ensure standard autoplay attributes are set programmatically as well
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+
+  // Try playing immediately
+  const playVideo = () => {
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          // Playback started successfully
+          console.log("Hero video autoplay started successfully.");
+        })
+        .catch((error) => {
+          console.warn("Autoplay was prevented by browser policies. Triggering fallback interaction listeners.", error);
+          
+          // Autoplay prevented (e.g., Low Power Mode). Setup one-time interaction listeners.
+          const playOnInteraction = () => {
+            video.play()
+              .then(() => {
+                // Remove listeners once playing successfully
+                removeInteractionListeners();
+              })
+              .catch((err) => {
+                console.error("Failed to play video even after interaction: ", err);
+              });
+          };
+
+          const removeInteractionListeners = () => {
+            document.removeEventListener("touchstart", playOnInteraction);
+            document.removeEventListener("click", playOnInteraction);
+            document.removeEventListener("scroll", playOnInteraction);
+          };
+
+          document.addEventListener("touchstart", playOnInteraction, { passive: true });
+          document.addEventListener("click", playOnInteraction, { passive: true });
+          document.addEventListener("scroll", playOnInteraction, { passive: true });
+        });
+    }
+  };
+
+  // Run play when loaded metadata or immediately if ready
+  if (video.readyState >= 1) {
+    playVideo();
+  } else {
+    video.addEventListener("loadedmetadata", playVideo);
+  }
 }
