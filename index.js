@@ -20,6 +20,7 @@ function initMobileNav() {
   const navToggle = document.querySelector(".mobile-nav-toggle");
   const nav = document.querySelector("#primary-navigation");
   const navLinks = document.querySelectorAll(".nav-link");
+  const header = document.querySelector(".header");
 
   if (navToggle && nav) {
     navToggle.addEventListener("click", () => {
@@ -27,6 +28,9 @@ function initMobileNav() {
       navToggle.setAttribute("aria-expanded", !expanded);
       nav.classList.toggle("open");
       navToggle.classList.toggle("active");
+      if (header) {
+        header.classList.toggle("nav-open");
+      }
     });
 
     // Close nav when clicking a link
@@ -35,6 +39,9 @@ function initMobileNav() {
         nav.classList.remove("open");
         navToggle.classList.remove("active");
         navToggle.setAttribute("aria-expanded", "false");
+        if (header) {
+          header.classList.remove("nav-open");
+        }
       });
     });
   }
