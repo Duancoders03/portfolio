@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truong Van Duan | Backend Developer</title>
+    <meta name="description" content="Professional Portfolio of Truong Van Duan - Backend Developer with experience in RESTful API design, database optimization (PostgreSQL, MySQL), system integration, and Docker automated deployment.">
+    <meta name="keywords" content="Truong Van Duan, Backend Developer, API Developer, Express, Node.js, Laravel, Docker, Cloudflare, Nga Son Plus, EPOSVN">
+    <meta name="author" content="Truong Van Duan">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://duandev.io.vn/">
+    <meta property="og:title" content="Truong Van Duan | Backend Developer">
+    <meta property="og:description" content="Explore backend development projects, database designs, and system optimization solutions by Truong Van Duan.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Constellation Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Navbar Header -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                DUAN<span>.DEV</span>
+            </a>
+            
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav class="nav" id="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <!-- Background elements -->
+            <div class="hero-bg-grid"></div>
+            <div class="hero-glow-orb orb-1"></div>
+            <div class="hero-glow-orb orb-2"></div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Hi, I'm</span>
+                    </div>
+                    <h1 class="hero-title">Truong Van Duan</h1>
+                    <h2 class="hero-subtitle">I'm a <span class="typing-text"></span><span class="cursor">|</span></h2>
+                    <p class="hero-desc">
+                        Backend Developer. Passionate about building high-performance APIs, optimizing databases, and deploying stable applications with Docker, PM2, and Cloudflare.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-glow-orb"></div>
+                    <div class="visual-ring ring-1"></div>
+                    <div class="visual-ring ring-2"></div>
+                    <img src="assets/avatar_glow.png" alt="Truong Van Duan Developer Illustration" class="visual-image">
+                    
+                    <!-- Floating Tech Tags -->
+                    <div class="floating-tag tag-node">
+                        <span class="tag-color-dot" style="background: #339933;"></span>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="floating-tag tag-docker">
+                        <span class="tag-color-dot" style="background: #2496ed;"></span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="floating-tag tag-postgres">
+                        <span class="tag-color-dot" style="background: #4169e1;"></span>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="floating-tag tag-api">
+                        <span class="tag-color-dot" style="background: #8b5cf6;"></span>
+                        <span>REST APIs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#about" aria-label="Scroll to about section">
+                    <div class="mouse-scroll">
+                        <div class="mouse-wheel"></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-bar"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-bio glass-card">
+                        <h3 class="card-subtitle">Backend Developer</h3>
+                        <p class="bio-text">
+                            With practical experience in building specialized backend business logic systems, database design and optimization, I aim to create well-structured, secure, and high-performance software products.
+                        </p>
+                        <p class="bio-text">
+                            I love solving automation and performance optimization challenges in backend systems, as well as applying AI Agents to make business operations smarter and more optimized.
+                        </p>
+                        <div class="bio-info-grid">
+                            <div class="info-item"><strong>Role:</strong> Backend Developer</div>
+                            
+                            <div class="info-item"><strong>Location:</strong>  Hanoi, Vietnam</div>
+                            <div class="info-item"><strong>Mindset:</strong> Lean - Efficient - Optimized</div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">1+</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Core Technologies</span>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Completed Projects</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="section-bar"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Card 1: Backend & APIs -->
+                    <div class="skill-card glass-card accent-backend">
+                        <div class="card-glow"></div>
+                        <div class="skill-card-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-icon" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4M12,18A2,2 0 0,1 10,16A2,2 0 0,1 12,14A2,2 0 0,1 14,16A2,2 0 0,1 12,18M15,10A2,2 0 0,1 17,12A2,2 0 0,1 15,14A2,2 0 0,1 13,12A2,2 0 0,1 15,10M9,10A2,2 0 0,1 11,12A2,2 0 0,1 9,14A2,2 0 0,1 7,12A2,2 0 0,1 9,10Z"/></svg>
+                            </div>
+                            <h3>Backend & APIs</h3>
+                        </div>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><span class="tag-dot"></span>Node.js (Express)</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>Laravel (PHP)</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>RESTful APIs</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>RabbitMQ</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>Socket.io (Real-time)</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Databases -->
+                    <div class="skill-card glass-card accent-database">
+                        <div class="card-glow"></div>
+                        <div class="skill-card-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-icon" viewBox="0 0 24 24"><path d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"/></svg>
+                            </div>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><span class="tag-dot"></span>PostgreSQL</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: DevOps & Cloud -->
+                    <div class="skill-card glass-card accent-devops">
+                        <div class="card-glow"></div>
+                        <div class="skill-card-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2M11 16H13V18H11V16M11 6H13V14H11V6Z"/></svg>
+                            </div>
+                            <h3>DevOps & Cloud</h3>
+                        </div>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><span class="tag-dot"></span>Docker</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>Cloudflare</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>PM2</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>CI/CD</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: AI -->
+                    <div class="skill-card glass-card accent-ai">
+                        <div class="card-glow"></div>
+                        <div class="skill-card-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-icon" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4M12,18A2,2 0 0,1 10,16A2,2 0 0,1 12,14A2,2 0 0,1 14,16A2,2 0 0,1 12,18M15,10A2,2 0 0,1 17,12A2,2 0 0,1 15,14A2,2 0 0,1 13,12A2,2 0 0,1 15,10Z"/></svg>
+                            </div>
+                            <h3>Artificial Intelligence (AI)</h3>
+                        </div>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><span class="tag-dot"></span>Agent AI</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Frontend & Tools -->
+                    <div class="skill-card glass-card accent-frontend">
+                        <div class="card-glow"></div>
+                        <div class="skill-card-header">
+                            <div class="category-icon-wrapper">
+                                <svg class="category-icon" viewBox="0 0 24 24"><path d="M12.89,3L14.85,3.4L11.11,21L9.15,20.6L12.89,3M19.59,12L16,8.41V5.58L22.42,12L16,18.41V15.58L19.59,12M1.58,12L8,5.58V8.41L4.41,12L8,15.58V18.41L1.58,12Z"/></svg>
+                            </div>
+                            <h3>Frontend & Tools</h3>
+                        </div>
+                        <div class="skills-tags">
+                            <span class="skill-tag"><span class="tag-dot"></span>React</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>JavaScript / TypeScript</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>HTML5 / CSS3 / Tailwind</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>Postman</span>
+                            <span class="skill-tag"><span class="tag-dot"></span>Git / GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Work Experience</h2>
+                    <div class="section-bar"></div>
+                </div>
+                
+                <div class="timeline">
+                    <!-- NHPTECH -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jan 2026 - Present</div>
+                        <div class="timeline-content glass-card">
+                            <div class="experience-header">
+                                <h3 class="role-title">Backend Developer</h3>
+                                <h4 class="company-name">NHPTECH</h4>
+                            </div>
+                            <p class="experience-summary">
+                                Responsible for designing and building disaster early warning and reservoir management systems for major hydropower plants.
+                            </p>
+                            <ul class="experience-details">
+                                <li>System design and development of **AI-integrated management & early warning software** for hydropower reservoirs.</li>
+                                <li>Built and optimized APIs for map data visualization, efficiently handling spatial GeoJSON formats.</li>
+                                <li>Integrated AI models to predict rainfall and water inflow, issuing early warning bulletins.</li>
+                                <li>Managed the integration and storage of large-scale satellite imagery for reservoir variation analysis.</li>
+                                <li>Developed instant notification solutions via FCM (Firebase Cloud Messaging) to transmit emergency alerts to authorities.</li>
+                            </ul>
+                            <div class="experience-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">PM2</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">Firebase (FCM)</span>
+                                <span class="tech-tag">AI API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wintech -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">Jul 2025 - Dec 2025</div>
+                        <div class="timeline-content glass-card">
+                            <div class="experience-header">
+                                <h3 class="role-title">Backend Developer</h3>
+                                <h4 class="company-name">Wintech</h4>
+                            </div>
+                            <p class="experience-summary">
+                                Contributed to the development of a multi-tenant sales management and commercial payment service system for the domestic market.
+                            </p>
+                            <ul class="experience-details">
+                                <li>Participated in developing and completing key tasks for the **EPOSVN** project (Multi-tenant Sales Management & E-Invoicing System).</li>
+                                <li>Main responsibilities: Led API development and product deployment.</li>
+                                <li>Handled invoice integration and synchronization, ensuring accurate data capture at points of sale (POS).</li>
+                            </ul>
+                            <div class="experience-tech">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">RESTful API</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Personal Projects</h2>
+                    <div class="section-bar"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: Nga Sơn Plus -->
+                    <div class="project-card glass-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets/ngasonplus.png" alt="Nga Sơn Plus Mockup Screen" class="project-image" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Nga Son Plus</h3>
+                            <p class="project-description">
+                                A local service ecosystem for digital transformation and community development in Nga Son district, Thanh Hoa province.
+                            </p>
+                            <div class="project-features">
+                                <strong>Key Features:</strong>
+                                <ul>
+                                    <li>Quick search and lookup of government offices, local amenities, and tourist spots.</li>
+                                    <li>Online bridge connecting local job seekers with businesses.</li>
+                                    <li>Promotion and distribution platform for local agricultural products and OCOP specialties.</li>
+                                    <li>24/7 economic-cultural news and forum for hometown community connection.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">RabbitMQ</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">PM2</span>
+                                <span class="tech-tag">Cloudflare</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://ngasonplus.duandev.io.vn/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Warehouse Inventory Management -->
+                    <div class="project-card glass-card">
+                        <div class="project-image-wrapper">
+                            <img src="assets/feature zalo.png" alt="Warehouse Management System Mockup Screen" class="project-image" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80'">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-name">Warehouse Management System (SMEs)</h3>
+                            <p class="project-description">
+                                A smart warehouse management solution featuring multi-tenant architecture, optimized inbound/outbound/inventory workflows, and multi-device mobile compatibility.
+                            </p>
+                            <div class="project-features">
+                                <strong>Key Features:</strong>
+                                <ul>
+                                    <li>Multi-tenant design supporting independent management for multiple businesses or branches.</li>
+                                    <li>Real-time, accurate tracking of product inbound, outbound, and stock levels.</li>
+                                    <li>Zalo Mini App integration for intuitive barcode/QR scanning on mobile devices.</li>
+                                    <li>Progressive Web App (PWA) offline capability during network disconnects.</li>
+                                </ul>
+                            </div>
+                            <div class="project-tags">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">PWA</span>
+                                <span class="tech-tag">Zalo Mini App</span>
+                            </div>
+                            <div class="project-actions">
+                               
+                                <a href="https://smartwarehouse.duandev.io.vn/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo</a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="section-bar"></div>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info-panel glass-card">
+                        <h3 class="card-subtitle">Connect with me</h3>
+                        <p class="contact-desc">
+                            I am always open to collaboration, freelance opportunities, or technical discussions. Let's connect and start a conversation!
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <!-- Email -->
+                            <div class="contact-method">
+                                <svg class="method-icon" viewBox="0 0 24 24"><path d="M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z"/></svg>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p><a href="mailto:truongduan999@gmail.com">truongduan999@gmail.com</a></p>
+                                </div>
+                            </div>
+                            
+                            <!-- Github -->
+                            <div class="contact-method">
+                                <svg class="method-icon" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z"/></svg>
+                                <div>
+                                    <h4>GitHub</h4>
+                                    <p><a href="https://github.com/Duancoders03" target="_blank" rel="noopener">github.com/Duancoders03</a></p>
+                                </div>
+                            </div>
+                            
+                            <!-- LinkedIn -->
+                            <div class="contact-method">
+                                <svg class="method-icon" viewBox="0 0 24 24"><path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C13.93,9.94 13.25,10.66 12.92,11.18V10.18H9.5V18.5H12.92V13.57C12.92,13.3 12.94,13.04 13.02,12.85C13.23,12.33 13.7,11.79 14.5,11.79C15.55,11.79 15.97,12.59 15.97,13.76V18.5H19.42M7.67,8.73A1.67,1.67 0 0,0 9.34,7.05A1.67,1.67 0 0,0 7.67,5.37A1.67,1.67 0 0,0 6,7.05A1.67,1.67 0 0,0 7.67,8.73M9.34,18.5V10.18H6V18.5H9.34Z"/></svg>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <p><a href="https://www.linkedin.com/in/du%E1%BA%A9n-tr%C6%B0%C6%A1ng-29aa3634a/" target="_blank" rel="noopener">duẩn-trương-29aa3634a</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-panel glass-card">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="formName">Full Name</label>
+                                <input type="text" id="formName" name="name" required placeholder="Enter your name">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="formEmail">Email Address</label>
+                                <input type="email" id="formEmail" name="email" required placeholder="your.email@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="formMessage">Message</label>
+                                <textarea id="formMessage" name="message" required rows="5" placeholder="How can I help you?"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        </form>
+                        <div id="formSuccess" class="form-success-message hidden">
+                            <svg class="success-icon" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z"/></svg>
+                            <h3>Thank You!</h3>
+                            <p>Your message has been sent successfully. I will respond as soon as possible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Truong Van Duan. All rights reserved.</p>
+            <p>Elegant Design & Optimized Performance</p>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="index.js"></script>
+</body>
+</html>

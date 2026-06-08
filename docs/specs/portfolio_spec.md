@@ -1,0 +1,115 @@
+# Technical Specification Document: Developer Portfolio - Truong Van Duan
+
+This document outlines the technical requirements, design guidelines, and system architecture for the personal portfolio website of **Truong Van Duan**, Backend Developer.
+
+---
+
+## 1. Project Goal
+The portfolio is designed to showcase Truong Van Duan's professional competence, work history, and key projects to recruiters and prospective partners.
+The website highlights:
+- Professional Backend development capabilities (API design, high-performance database optimization).
+- Automation solutions, backend performance optimization, and AI Agent integrations to streamline business operations.
+- App deployment skills (Docker, VPS, PM2, Cloudflare).
+- Practical work experience at Wintech (EPOSVN project) and NHPTECH (hydropower reservoir early warning system).
+- Personal project: **Nga Son Plus** (digital map and local community service platform).
+- Clean code practices, responsive UI, and premium design aesthetics.
+
+---
+
+## 2. Requirements & Content Sections
+
+### 2.0 About Me (Bio)
+- **Professional Summaries**:
+  - *"With practical experience in building specialized backend business logic, designing, and optimizing databases, I aim to create well-structured, secure, and high-performance software products."*
+  - *"I love solving automation challenges, optimizing backend performance, and implementing AI Agents to bring intelligence and efficiency to real-world business operations."*
+- **Quick Info**:
+  - Role: Backend Developer
+  - Location: Hanoi, Vietnam
+  - Mindset: Lean - Efficient - Optimized
+
+### 2.1 Skills Grid Showcase
+The portfolio groups and showcases technical skills in 5 glassmorphic cards:
+- **Backend & APIs (Core)**: Node.js (Express), Laravel (PHP), RESTful APIs, RabbitMQ, Socket.io (Real-time).
+- **Databases**: PostgreSQL, MySQL, Redis, Sequelize, Eloquent.
+- **DevOps & Operations**: Docker, Cloudflare, PM2, CI/CD.
+- **Artificial Intelligence (AI)**: Agent AI, Prompt Engineering, Model Integration, Automation.
+- **Frontend & Tools**: React, JavaScript/TypeScript, HTML5/CSS3/Tailwind, Postman, Git/GitHub.
+
+### 2.2 Work Experience
+- **NHPTECH** (Backend Developer) [Jan 2026 - Present]:
+  - Designed system architecture and developed AI-integrated management & early warning software for hydropower reservoirs.
+  - Built and optimized APIs for map data visualization, efficiently handling spatial GeoJSON formats.
+  - Integrated AI models to predict rainfall and water inflow, issuing early warning bulletins.
+  - Managed the integration and storage of large-scale satellite imagery for reservoir variation analysis.
+  - Developed instant notification solutions via FCM (Firebase Cloud Messaging) to transmit emergency alerts to authorities.
+  - **Tech Stack**: Node.js, JavaScript, PostgreSQL, Docker, PM2, Redis, Firebase (FCM), AI API.
+- **Wintech** (Backend Developer) [Jul 2025 - Dec 2025]:
+  - Participated in developing and completing key tasks for the EPOSVN project (Multi-tenant Sales Management & E-Invoicing System).
+  - Main responsibilities: Led API development and product deployment.
+  - Handled invoice integration and synchronization, ensuring accurate data capture at points of sale (POS).
+  - **Tech Stack**: Laravel, PHP, MySQL, Angular, RESTful API, Docker.
+
+### 2.3 Personal Projects
+- **Nga Son Plus** (Local Service Ecosystem & Digital Map)
+  - Description: A local service ecosystem for digital transformation and community development in Nga Son district, Thanh Hoa province.
+  - **Key Features**:
+    1. **Digital Map**: Quick search and lookup of government offices, local amenities, and tourist spots.
+    2. **Local Recruitment**: Online bridge connecting local job seekers with businesses.
+    3. **OCOP Agricultural Marketplace**: Promotion and distribution platform for local agricultural products and OCOP specialties.
+    4. **News & Forum**: 24/7 economic-cultural news and forum for hometown community connection.
+  - **Tech Stack**: Node.js, Tailwind CSS, RabbitMQ, Docker, PM2, Cloudflare, PostgreSQL, JavaScript.
+- **Warehouse Management System (SMEs)**
+  - Description: A smart warehouse management solution featuring multi-tenant architecture, optimized inbound/outbound/inventory workflows, and multi-device mobile compatibility.
+  - **Key Features**:
+    1. **Multi-tenant Architecture**: Supporting independent management for multiple businesses/branches on a single system.
+    2. **Stock Flow Management**: Real-time, accurate tracking of product inbound, outbound, and stock levels.
+    3. **Zalo Mini App Integration**: Intuitive barcode/QR scanning on mobile devices.
+    4. **Offline Synchronization (PWA)**: Progressive Web App support to manage transactions during network disconnects.
+  - **Tech Stack**: Laravel, MySQL, React, TypeScript, PWA, Zalo Mini App.
+
+---
+
+## 3. UI/UX Design System
+
+Applying an elegant, clean, and professional **Light Glassmorphism** design pattern.
+
+### 3.1 Color Palette
+- **Main Background**: `#f8f9fa` (Soft Light Gray)
+- **Cards/Containers**: `rgba(255, 255, 255, 0.75)` with `backdrop-filter: blur(16px)` and subtle borders.
+- **Primary Accent**: `#4f46e5` (Royal Indigo)
+- **Secondary Accent**: `#0ea5e9` (Electric Sky Blue)
+- **Primary Text**: `#0f172a` (Deep Slate)
+- **Secondary Text**: `#475569` (Slate Gray)
+
+### 3.2 Typography
+- **Headings**: *Outfit* (Modern, minimalist, and striking)
+- **Body Text**: *Inter* (Highly legible, professional)
+- **Terminal/CLI Interface**: *JetBrains Mono*
+
+### 3.3 Dynamic Transitions & Key Interactions
+1. **Interactive Constellation Canvas**: Interlinked particles moving with mouse movements in the background.
+2. **Text Typing Animation**: Typing effect on headings for roles (`Backend Developer`, `API & Database Developer`, `System Integration Developer`).
+3. **Advanced Hero Section**: Blurred grid pattern (`.hero-bg-grid`), slow-moving gradient glow orbs (`.hero-glow-orb`), thin rotating rings (`.visual-ring`), and technology tags floating around the avatar profile wrapper.
+4. **Skills Grid**: 5 distinct glassmorphism cards that change border/shadow highlights according to their respective accent colors on hover, along with smooth tech-tag hover scaling.
+5. **Animated Mouse Indicator**: Smooth scroll-down mouse animation replacing static icons.
+
+---
+
+## 4. Technical Architecture
+Super lightweight Single Page Application (SPA) with zero external script dependencies:
+- **Structure**: Semantic HTML5 (`index.html`)
+- **Styling**: Vanilla CSS3 using CSS Variables (`index.css`)
+- **Interactions**: Vanilla JavaScript ES6+ (`index.js`)
+
+---
+
+## 5. Folder Structure
+```text
+f:/CV/portfolo/
+├── docs/
+│   └── specs/
+│       └── portfolio_spec.md      # This specification file
+├── index.html                     # Primary UI markup
+├── index.css                      # Design tokens and layout styling
+└── index.js                       # Interactive scripts (typing animation, canvas background, scroll effects)
+```
