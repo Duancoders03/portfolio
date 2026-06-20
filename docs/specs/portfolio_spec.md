@@ -45,8 +45,8 @@ The portfolio groups and showcases technical skills in 5 glassmorphic cards:
   - **Tech Stack**: Node.js, JavaScript, PostgreSQL, Docker, PM2, Redis, Firebase (FCM), AI API.
 - **Wintech** (Backend Developer) [Jul 2025 - Dec 2025]:
   - Participated in developing and completing key tasks for the EPOSVN project (Multi-tenant Sales Management & E-Invoicing System).
-  - Main responsibilities: Led API development and product deployment.
-  - Handled invoice integration and synchronization, ensuring accurate data capture at points of sale (POS).
+  - Main responsibilities: Participated in API development and product deployment.
+  - Handled automated invoice integration and synchronization (without CAPTCHA), ensuring accurate data capture at points of sale (POS).
   - **Tech Stack**: Laravel, PHP, MySQL, Angular, RESTful API, Docker.
 
 ### 2.3 Personal Projects
@@ -59,13 +59,13 @@ The portfolio groups and showcases technical skills in 5 glassmorphic cards:
     4. **News & Forum**: 24/7 economic-cultural news and forum for hometown community connection.
   - **Tech Stack**: Node.js, Tailwind CSS, RabbitMQ, Docker, PM2, Cloudflare, PostgreSQL, JavaScript.
 - **Warehouse Management System (SMEs)**
-  - Description: A smart warehouse management solution featuring multi-tenant architecture, optimized inbound/outbound/inventory workflows, and multi-device mobile compatibility.
+  - Description: A smart SaaS-based warehouse management solution featuring multi-tenant architecture, optimized inbound/outbound/inventory workflows, and multi-device mobile compatibility.
   - **Key Features**:
-    1. **Multi-tenant Architecture**: Supporting independent management for multiple businesses/branches on a single system.
+    1. **Multi-tenant SaaS Architecture**: Supporting independent management and flexible subscription options for multiple businesses/branches.
     2. **Stock Flow Management**: Real-time, accurate tracking of product inbound, outbound, and stock levels.
     3. **Zalo Mini App Integration**: Intuitive barcode/QR scanning on mobile devices.
     4. **Offline Synchronization (PWA)**: Progressive Web App support to manage transactions during network disconnects.
-  - **Tech Stack**: Laravel, MySQL, React, TypeScript, PWA, Zalo Mini App.
+  - **Tech Stack**: SaaS, Laravel, MySQL, React, TypeScript, PWA, Zalo Mini App.
 
 ---
 
