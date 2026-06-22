@@ -67,6 +67,11 @@ The portfolio groups and showcases technical skills in 5 glassmorphic cards:
     4. **Offline Synchronization (PWA)**: Progressive Web App support to manage transactions during network disconnects.
   - **Tech Stack**: SaaS, Laravel, MySQL, React, TypeScript, PWA, Zalo Mini App.
 
+### 2.4 Education
+- **Hanoi University of Mining and Geology (HUMG)** [2022 - 2026]:
+  - Bachelor of Computer Science (GPA: 3.05/4.0).
+  - **"HUMG Cloud" (Student Scientific Research):** Team Leader, winning the Consolation Prize for building an internal document management and cloud storage platform for university teachers and students.
+
 ---
 
 ## 3. UI/UX Design System

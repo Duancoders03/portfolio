@@ -1632,6 +1632,179 @@ section {
 }
 
 /* ==========================================================================
+   Education Section
+   ========================================================================== */
+
+.education-section {
+    position: relative;
+}
+
+.education-grid {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.education-card {
+    padding: 2.25rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-primary);
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    padding-bottom: 1.25rem;
+    position: relative;
+}
+
+.edu-logo-wrapper {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(79, 70, 229, 0.05);
+    border: 1px solid rgba(79, 70, 229, 0.1);
+    flex-shrink: 0;
+    transition: var(--transition-smooth);
+}
+
+.education-card:hover .edu-logo-wrapper {
+    background: var(--gradient-primary);
+    transform: scale(1.08) rotate(4deg);
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+}
+
+.edu-icon {
+    width: 26px;
+    height: 26px;
+    fill: var(--color-cyan);
+    transition: fill var(--transition-smooth);
+}
+
+.education-card:hover .edu-icon {
+    fill: #ffffff;
+}
+
+.edu-title-group {
+    flex: 1;
+}
+
+.institution-name {
+    font-size: 1.35rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.major-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.edu-gpa {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.edu-gpa strong {
+    color: var(--color-cyan);
+    font-weight: 600;
+}
+
+.edu-date {
+    font-family: var(--font-header);
+    font-weight: 600;
+    color: var(--color-cyan);
+    font-size: 0.95rem;
+    background: rgba(79, 70, 229, 0.06);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    border: 1px solid rgba(79, 70, 229, 0.1);
+}
+
+.education-desc {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.education-achievements {
+    background: rgba(15, 23, 42, 0.01);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+.education-achievements strong {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.education-achievements ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.education-achievements li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.education-achievements li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-cyan);
+    font-weight: 700;
+}
+
+.education-achievements li strong {
+    display: inline;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .education-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .edu-date {
+        align-self: flex-start;
+    }
+    
+    .education-card {
+        padding: 1.75rem 1.5rem;
+    }
+}
+
+/* ==========================================================================
    Scroll Reveal Animation Styles
    ========================================================================== */
 
