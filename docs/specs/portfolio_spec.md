@@ -70,7 +70,9 @@ The portfolio groups and showcases technical skills in 5 glassmorphic cards:
 ### 2.4 Education
 - **Hanoi University of Mining and Geology (HUMG)** [2022 - 2026]:
   - Bachelor of Computer Science (GPA: 3.05/4.0).
-  - **"HUMG Cloud" (Student Scientific Research):** Team Leader, winning the Consolation Prize for building an internal document management and cloud storage platform for university teachers and students.
+  - **Achievements**:
+    - **"HUMG Cloud" (Student Scientific Research):** Team Leader, winning the Consolation Prize for building an internal document management and cloud storage platform for university teachers and students.
+    - **Aptis ESOL English Certificate**
 
 ---
 
