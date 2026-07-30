@@ -98,7 +98,7 @@ function initTypingAnimation() {
   const targetElement = document.querySelector(".typing-text");
   if (!targetElement) return;
 
-  const roles = ["Backend Developer", "Node.js Developer"];
+  const roles = ["Fullstack Developer", "Backend Developer", "Node.js / Express Specialist"];
 
   let roleIndex = 0;
   let charIndex = 0;
